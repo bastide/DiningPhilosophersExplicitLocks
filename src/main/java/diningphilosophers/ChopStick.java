@@ -3,22 +3,22 @@ package diningphilosophers;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.*;
 
-public class ChopStick {
+public class ChopStick extends ReentrantLock {
 
-    private final Lock verrou = new ReentrantLock();
     private static int stickCount = 0;
     private final int myNumber;
 
     public ChopStick() {
+        super();
         myNumber = ++stickCount;
     }
 
     public boolean tryTake(int delay) throws InterruptedException {
-        return verrou.tryLock(delay, TimeUnit.MILLISECONDS);
+        return tryLock(delay, TimeUnit.MILLISECONDS);
     }
 
     public void release() {
-            verrou.unlock();
+            unlock();
     }
 
     @Override
