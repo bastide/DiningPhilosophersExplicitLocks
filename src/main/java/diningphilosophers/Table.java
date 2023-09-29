@@ -19,9 +19,9 @@ public class Table {
 		}
 		catch (IOException ex) {
 		}
-		rigaud.arreteToi();
-		conchon.arreteToi();
-		bastide.arreteToi();
+		rigaud.leaveTable();
+		conchon.leaveTable();
+		bastide.leaveTable();
                 
 	}
 }

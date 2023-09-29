@@ -47,7 +47,7 @@ public class Philosopher
 		}
 	}
         
-        public void arreteToi() {
+        public void leaveTable() {
             jeContinue = false;
         }
 
